@@ -5,17 +5,18 @@ FROM alpine:latest
 CMD ["echo", "Hello, world!"]
 # Tail: Displays last part of a file
 
-RUN echo "Show last number of lines in a file"
+
 CMD ["tail -n {{num}} {{file}}"]
+RUN echo "Show last number of lines in a file"
 
-RUN echo "Show all files since line num"
 CMD ["tail -n +{{num}} {{file}}"]
+RUN echo "Show all files since line num"
 
-RUN echo "Show last number of bytes in a file"
 CMD ["tail -c {{num}} {{file}}"]
+RUN echo "Show last number of bytes in a file"
 
-RUN echo "Keep reading the file until CTRL + C is entered"
 CMD ["tail -f {{file}}"]
+RUN echo "Keep reading the file until CTRL + C is entered"
 
-RUN echo "Keep reading file until CTRL + C is entered, even if the file is rotated"
 CMD ["tail -F {{file}}"]
+RUN echo "Keep reading file until CTRL + C is entered, even if the file is rotated"
