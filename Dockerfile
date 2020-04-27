@@ -2,7 +2,7 @@
 FROM alpine:latest
 # ------------------------- IMPLEMENT SOLUTION BELOW ------------------------- #
 
-CMD ["tail"]
+ENTRYPOINT ["tail"]
 #Sample Command
 #docker run --rm -v $HOME:$HOME --name bew_docker-tail bew_docker_tail -n 2 $PWD/sample.txt
 
