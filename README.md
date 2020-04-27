@@ -48,3 +48,8 @@ _Runs the `IMAGE_NAME` image. Deletes the container after executing the `CMD`_.
 ```bash
 $ docker run --rm --name CONTAINER_NAME IMAGE_NAME
 ```
+### Other Examples
+'''
+#Tail Commands
+docker run --rm -v $HOME:$HOME --name bew_docker-tail bew_docker_tail -n 2 $PWD/sample.txt
+'''
